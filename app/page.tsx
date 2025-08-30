@@ -10,7 +10,7 @@ export default function Home() {
         </div>
         <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
           <p className="text-gray-600 dark:text-gray-400">
-            Click "Add a Mutilator" to add a new entry to the database.
+            Click &quot;Add a Mutilator&quot; to add a new entry to the database.
           </p>
         </div>
       </main>
