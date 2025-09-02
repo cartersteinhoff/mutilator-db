@@ -1,26 +1,19 @@
 import { MutilatorsList } from "@/components/mutilators-list";
 import { AddMutilatorModal } from "@/components/add-mutilator-modal";
-import Link from "next/link";
 
 export default function MutilatorsPage() {
   return (
-    <div className="font-sans min-h-screen p-8 pb-20 sm:p-20">
-      <main className="max-w-4xl mx-auto">
+    <div className="container mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <Link 
-            href="/"
-            className="text-blue-500 hover:text-blue-600 text-sm mb-4 inline-block"
-          >
-            ← Back to Home
-          </Link>
-          <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-bold">All Mutilators</h1>
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <h1 className="text-3xl md:text-4xl font-bold">All Mutilators</h1>
             <AddMutilatorModal />
           </div>
         </div>
         
         <MutilatorsList />
-      </main>
+      </div>
     </div>
   );
 }

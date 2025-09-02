@@ -1,26 +1,38 @@
-import { AddMutilatorModal } from "@/components/add-mutilator-modal";
-import Link from "next/link";
+import { FeaturedMutilatorAlt } from "@/components/featured-mutilator-alt";
+import { DatabaseStats } from "@/components/database-stats";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen p-8 pb-20 sm:p-20">
-      <main className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Mutilator Database</h1>
-        <div className="flex gap-4 mb-8">
-          <AddMutilatorModal />
-          <Link 
-            href="/mutilators"
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
-          >
-            View All Mutilators
-          </Link>
+    <div className="container mx-auto px-4 py-8 md:py-12">
+      <div className="max-w-6xl mx-auto">
+        {/* Hero Design - Split Screen */}
+        <FeaturedMutilatorAlt />
+
+        <DatabaseStats />
+
+        {/* Features Section */}
+        <div className="border border-border rounded-lg p-8 bg-card">
+          <h2 className="text-2xl font-bold mb-4">Features</h2>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-start">
+              <span className="text-purple-400 mr-2">✓</span>
+              Real-time search across all mutilator records
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-400 mr-2">✓</span>
+              Filter by type: Doctors, Nurses, and Mohels
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-400 mr-2">✓</span>
+              Image uploads with Vercel Blob Storage
+            </li>
+            <li className="flex items-start">
+              <span className="text-purple-400 mr-2">✓</span>
+              PostgreSQL database with Neon serverless
+            </li>
+          </ul>
         </div>
-        <div className="border border-gray-200 dark:border-gray-800 rounded-lg p-6">
-          <p className="text-gray-600 dark:text-gray-400">
-            Click &quot;Add a Mutilator&quot; to add a new entry to the database or &quot;View All Mutilators&quot; to see the list.
-          </p>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }

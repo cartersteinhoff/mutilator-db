@@ -1,0 +1,13 @@
+{
+  "name": "neon-mcp-server",
+  "description": "MCP server for Neon database management",
+  "apiKey": "napi_318txsaniuwtkbolgx1sr6mpk0i3hnu8p5sdc2oz324pd23y174znjfqqpo7zgz4",
+  "server": {
+    "command": "npx",
+    "args": [
+      "@neondatabase/mcp-server-neon",
+      "start",
+      "napi_318txsaniuwtkbolgx1sr6mpk0i3hnu8p5sdc2oz324pd23y174znjfqqpo7zgz4"
+    ]
+  }
+}

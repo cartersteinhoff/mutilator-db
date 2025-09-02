@@ -1,0 +1,1 @@
+ALTER TABLE "mutilators" ADD COLUMN "description" text;
